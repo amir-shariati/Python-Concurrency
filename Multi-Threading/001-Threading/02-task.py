@@ -17,3 +17,6 @@ for n in range(1, 11):
     threads.append(t)
     t.start()
 
+# wait for the threads to complete
+for t in threads:
+    t.join()
