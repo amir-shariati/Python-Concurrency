@@ -11,6 +11,7 @@ def show(name):
 start_time = perf_counter()
 
 t1 = Thread(show, args=('One',))
+t2 = Thread(show, args=('Two',))
 
 end_time = perf_counter()
 
