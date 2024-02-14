@@ -9,3 +9,7 @@ def task(id):
 
 
 threads = []
+for n in range(1, 11):
+    t = Thread(target=task, args=(n,))
+    threads.append(t)
+    t.start()
