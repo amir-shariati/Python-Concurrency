@@ -17,6 +17,9 @@ t2 = Thread(target=show, args=('Two',))
 t1.start()
 t2.start()
 
+# wait for the threads to complete
+t1.join()
+
 end_time = perf_counter()
 
 print(f'It took {end_time - start_time: 0.2f} second(S)')
