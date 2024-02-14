@@ -4,7 +4,7 @@ from threading import Thread
 
 def task(id):
     print(f'starting the task {id}')
-    sleep(1)
+    sleep(3)
     print(f'the task {id} completed')
 
 
