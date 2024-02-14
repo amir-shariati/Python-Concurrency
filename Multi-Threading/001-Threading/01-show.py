@@ -15,6 +15,7 @@ t2 = Thread(show, args=('Two',))
 
 # start the threads
 t1.start()
+t2.start()
 
 end_time = perf_counter()
 
