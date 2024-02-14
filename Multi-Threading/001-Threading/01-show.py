@@ -10,8 +10,8 @@ def show(name):
 
 start_time = perf_counter()
 
-t1 = Thread(show, args=('One',))
-t2 = Thread(show, args=('Two',))
+t1 = Thread(target=show, args=('One',))
+t2 = Thread(target=show, args=('Two',))
 
 # start the threads
 t1.start()
