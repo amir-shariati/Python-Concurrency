@@ -11,11 +11,8 @@ def task(id):
 start_time = perf_counter()
 
 # create and start 10 threads
-threads = []
-for n in range(1, 11):
-    t = Thread(target=task, args=(n,))
-    threads.append(t)
-    t.start()
+threads = [Thread(target=task, args=(n,)) for n in range(1, 11)]
+
 
 # wait for the threads to complete
 for t in threads:
