@@ -6,3 +6,6 @@ def show(name):
     print(f'start {name}')
     sleep(2)
     print(f'stop {name}')
+
+
+start_time = perf_counter()
