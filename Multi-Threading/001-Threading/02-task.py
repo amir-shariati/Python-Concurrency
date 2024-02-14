@@ -20,3 +20,5 @@ for n in range(1, 11):
 # wait for the threads to complete
 for t in threads:
     t.join()
+
+end_time = perf_counter()
