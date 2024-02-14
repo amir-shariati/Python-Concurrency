@@ -12,3 +12,5 @@ start_time = perf_counter()
 show('One')
 show('Two')
 end_time = perf_counter()
+
+print(f'It took {end_time - start_time: 0.2f} second(S)')
