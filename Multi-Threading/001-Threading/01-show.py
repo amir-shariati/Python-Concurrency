@@ -19,6 +19,7 @@ t2.start()
 
 # wait for the threads to complete
 t1.join()
+t2.join()
 
 end_time = perf_counter()
 
