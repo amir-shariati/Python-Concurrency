@@ -9,3 +9,5 @@ def show(name):
 
 
 start_time = perf_counter()
+show('One')
+show('Two')
