@@ -9,8 +9,9 @@ def show(name):
 
 
 start_time = perf_counter()
-show('One')
-show('Two')
+
+t1 = Thread(show, args=('One',))
+
 end_time = perf_counter()
 
 print(f'It took {end_time - start_time: 0.2f} second(S)')
