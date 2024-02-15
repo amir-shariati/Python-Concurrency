@@ -20,3 +20,6 @@ class ShowThread(Thread):
 
 t1 = ShowThread('One', 3)
 t2 = ShowThread('Two', 3)
+
+t1.start()
+t2.start()
