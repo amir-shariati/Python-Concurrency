@@ -18,6 +18,8 @@ class ShowThread(Thread):
         show(self.name, self.delay)
 
 
+start_time = perf_counter()
+
 t1 = ShowThread('One', 3)
 t2 = ShowThread('Two', 3)
 
