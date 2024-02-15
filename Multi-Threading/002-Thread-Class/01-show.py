@@ -30,3 +30,4 @@ t1.join()
 t2.join()
 
 end_time = perf_counter()
+print(f'it took {end_time - start_time: 0.2f} second(S)')
