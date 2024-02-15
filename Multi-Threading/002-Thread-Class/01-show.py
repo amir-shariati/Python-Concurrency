@@ -16,3 +16,7 @@ class ShowThread(Thread):
 
     def run(self):
         show(self.name, self.delay)
+
+
+t1 = ShowThread('One', 3)
+t2 = ShowThread('Two', 3)
