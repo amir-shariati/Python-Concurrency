@@ -9,7 +9,12 @@ class TaskThread(Thread):
         self.delay = delay
 
     def run(self):
-        task(self.task_id, self.delay)
+        self.task(self.task_id, self.delay)
+
+    def task(self, id, delay):
+        print(f'starting the task {id} ')
+        sleep(3)
+        print(f'the task {id} completed ')
 
 
 start_time = perf_counter()
