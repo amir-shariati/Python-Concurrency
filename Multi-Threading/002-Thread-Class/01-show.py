@@ -28,3 +28,5 @@ t2.start()
 
 t1.join()
 t2.join()
+
+end_time = perf_counter()
