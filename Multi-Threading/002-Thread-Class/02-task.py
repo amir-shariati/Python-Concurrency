@@ -3,9 +3,9 @@ from threading import Thread
 
 
 def task(id, delay):
-    print(f'starting the task {id} \n')
+    print(f'starting the task {id} ')
     sleep(3)
-    print(f'the task {id} completed \n')
+    print(f'the task {id} completed ')
 
 
 class TaskThread(Thread):
