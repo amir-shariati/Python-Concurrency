@@ -30,4 +30,4 @@ for t in threads:
 
 end_time = perf_counter()
 
-print(f'It took {end_time- start_time: 0.2f} second(s) to complete.')
+print(f'\n It took {end_time- start_time: 0.2f} second(s) to complete.')
