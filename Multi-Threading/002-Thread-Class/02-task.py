@@ -2,12 +2,6 @@ from time import sleep, perf_counter
 from threading import Thread
 
 
-def task(id, delay):
-    print(f'starting the task {id} ')
-    sleep(3)
-    print(f'the task {id} completed ')
-
-
 class TaskThread(Thread):
     def __init__(self, task_id, delay):
         super().__init__()
