@@ -22,3 +22,6 @@ threads = [TaskThread(n, 3) for n in range(1, 11)]
 
 for t in threads:
     t.start()
+
+for t in threads:
+    t.join()
