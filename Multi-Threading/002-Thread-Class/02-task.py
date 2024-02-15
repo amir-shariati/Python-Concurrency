@@ -9,9 +9,10 @@ def task(id, delay):
 
 
 class TaskThread(Thread):
-    def __init__(self, task_id):
+    def __init__(self, task_id, delay):
         super().__init__()
         self.task_id = task_id
+        self.delay = delay
 
     def run(self):
         task(self.task_id)
