@@ -16,3 +16,6 @@ class TaskThread(Thread):
 
     def run(self):
         task(self.task_id, self.delay)
+
+
+threads = [TaskThread(n, 3) for n in range(1, 11)]
