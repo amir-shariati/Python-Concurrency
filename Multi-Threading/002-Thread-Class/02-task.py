@@ -27,3 +27,5 @@ for t in threads:
 
 for t in threads:
     t.join()
+
+end_time = perf_counter()
