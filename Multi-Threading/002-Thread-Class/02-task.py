@@ -15,4 +15,4 @@ class TaskThread(Thread):
         self.delay = delay
 
     def run(self):
-        task(self.task_id)
+        task(self.task_id, self.delay)
