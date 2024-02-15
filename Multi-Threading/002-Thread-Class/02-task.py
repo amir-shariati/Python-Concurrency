@@ -18,6 +18,8 @@ class TaskThread(Thread):
         task(self.task_id, self.delay)
 
 
+start_time = perf_counter()
+
 threads = [TaskThread(n, 3) for n in range(1, 11)]
 
 for t in threads:
