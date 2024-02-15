@@ -9,7 +9,12 @@ class ShowThread(Thread):
         self.delay = delay
 
     def run(self):
-        show(self.name, self.delay)
+        self.show(self.name, self.delay)
+
+    def show(self, name, delay):
+        print(f'start {name}')
+        sleep(delay)
+        print(f'stop {name}')
 
 
 start_time = perf_counter()
