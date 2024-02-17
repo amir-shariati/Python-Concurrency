@@ -29,3 +29,5 @@ def main():
     threads = [HttpRequestThread(url) for url in urls]
 
     [t.start() for t in threads]
+
+    [t.join() for t in threads]
