@@ -37,3 +37,7 @@ def main():
     end_time = perf_counter()
 
     print(f'\n It took {end_time - start_time: 0.2f} second(s) to complete.')
+
+
+if __name__ == '__main__':
+    main()
