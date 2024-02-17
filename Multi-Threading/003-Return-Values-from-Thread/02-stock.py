@@ -4,4 +4,8 @@ import requests
 
 
 class Stock(Thread):
-    pass
+    def __init__(self, symbol):
+        super().__init__()
+        self.symbol = symbol
+        self.url = f'https://finance.yahoo.com/quote/{symbol}'
+        self.price = None
