@@ -41,3 +41,6 @@ def main():
 
     # join threads
     [t.join() for t in threads]
+
+    # print stocks price
+    [print(t) for t in threads]
