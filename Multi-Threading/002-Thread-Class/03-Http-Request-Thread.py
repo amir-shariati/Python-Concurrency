@@ -26,6 +26,8 @@ def main():
         'https://httpstat.us/400'
     ]
 
+    start_time = perf_counter()
+
     threads = [HttpRequestThread(url) for url in urls]
 
     [t.start() for t in threads]
