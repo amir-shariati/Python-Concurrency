@@ -29,3 +29,7 @@ class Stock(Thread):
 
     def __str__(self):
         return f'{self.symbol}\t{self.price}'
+
+
+def main():
+    pass
