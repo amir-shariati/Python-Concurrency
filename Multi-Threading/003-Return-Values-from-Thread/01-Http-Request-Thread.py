@@ -32,3 +32,6 @@ def main():
     [t.start() for t in threads]
 
     [t.join() for t in threads]
+
+    # display the URLs with HTTP status codes
+    [print(f'{t.url}: {t.http_status_code}') for t in threads]
