@@ -19,3 +19,10 @@ class HttpRequestThread(Thread):
             self.http_status_code = e.code
         except urllib.error.URLError as e:
             self.reason = e.reason
+
+
+def main():
+    urls = [
+        'https://httpstat.us/200',
+        'https://httpstat.us/400'
+    ]
