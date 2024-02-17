@@ -33,3 +33,5 @@ class Stock(Thread):
 
 def main():
     symbols = ['MSFT', 'GOOGL', 'AAPL', 'META']
+
+    threads = [Stock(symbol) for symbol in symbols]
