@@ -33,3 +33,6 @@ def main():
     [t.start() for t in threads]
 
     [t.join() for t in threads]
+
+    end_time = perf_counter()
+
