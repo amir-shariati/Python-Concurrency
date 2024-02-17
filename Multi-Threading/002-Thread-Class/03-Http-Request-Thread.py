@@ -25,3 +25,5 @@ def main():
         'https://httpstat.us/200',
         'https://httpstat.us/400'
     ]
+
+    threads = [HttpRequestThread(url) for url in urls]
