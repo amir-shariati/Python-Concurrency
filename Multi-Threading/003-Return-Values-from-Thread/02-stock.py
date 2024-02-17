@@ -38,3 +38,6 @@ def main():
 
     # start threads
     [t.start() for t in threads]
+
+    # join threads
+    [t.join() for t in threads]
