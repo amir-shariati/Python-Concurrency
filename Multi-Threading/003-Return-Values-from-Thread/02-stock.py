@@ -26,3 +26,6 @@ class Stock(Thread):
                     self.price = float(price_text[0].replace(',', ''))
                 except ValueError:
                     self.price = None
+
+    def __str__(self):
+        return f'{self.symbol}\t{self.price}'
