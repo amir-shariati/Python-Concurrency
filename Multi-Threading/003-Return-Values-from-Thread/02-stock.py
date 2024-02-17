@@ -9,3 +9,6 @@ class Stock(Thread):
         self.symbol = symbol
         self.url = f'https://finance.yahoo.com/quote/{symbol}'
         self.price = None
+
+    def run(self):
+        pass
