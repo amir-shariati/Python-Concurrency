@@ -32,4 +32,4 @@ class Stock(Thread):
 
 
 def main():
-    pass
+    symbols = ['MSFT', 'GOOGL', 'AAPL', 'META']
