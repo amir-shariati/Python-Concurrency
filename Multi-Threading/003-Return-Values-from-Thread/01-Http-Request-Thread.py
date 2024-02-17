@@ -35,5 +35,7 @@ def main():
 
     [t.join() for t in threads]
 
+    end_time = perf_counter()
+
     # display the URLs with HTTP status codes
     [print(f'{t.url}: {t.http_status_code}') for t in threads]
