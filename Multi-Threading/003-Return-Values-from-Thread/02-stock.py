@@ -44,3 +44,7 @@ def main():
 
     # print stocks price
     [print(t) for t in threads]
+
+
+if __name__ == '__main__':
+    main()
