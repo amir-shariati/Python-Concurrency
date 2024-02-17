@@ -41,3 +41,7 @@ def main():
 
     # display the URLs with HTTP status codes
     [print(f'{t.url}: {t.http_status_code}') for t in threads]
+
+
+if __name__ == '__main__':
+    main()
