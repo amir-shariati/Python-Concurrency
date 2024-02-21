@@ -12,3 +12,5 @@ def show_timer():
 
 t = Thread(target=show_timer, daemon=True)
 t.start()
+
+answer = input('Do you want to exit?\n')
