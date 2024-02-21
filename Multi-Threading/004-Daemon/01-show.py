@@ -21,3 +21,5 @@ t2.start()
 end_time = perf_counter()
 
 print(f'It took {end_time - start_time: 0.2f} second(S)')
+
+sys.exit(0)
