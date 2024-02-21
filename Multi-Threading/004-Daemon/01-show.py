@@ -9,3 +9,6 @@ def show(name):
 
 
 start_time = perf_counter()
+
+t1 = Thread(target=show, args=('One',), daemon=True)
+t2 = Thread(target=show, args=('Two',), daemon=True)
