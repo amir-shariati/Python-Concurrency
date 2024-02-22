@@ -18,3 +18,5 @@ with ThreadPoolExecutor() as executor:
     print(f2.result())
 
 finish = perf_counter()
+
+print(f"It took {finish-start} second(s) to finish.")
