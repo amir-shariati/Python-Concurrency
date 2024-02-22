@@ -16,3 +16,5 @@ with ThreadPoolExecutor() as executor:
 
     print(f1.result())
     print(f2.result())
+
+finish = perf_counter()
