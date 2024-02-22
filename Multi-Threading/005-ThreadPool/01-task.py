@@ -6,3 +6,11 @@ def task(id):
     print(f'Starting the task {id}...')
     sleep(1)
     return f'Done with task {id}'
+
+
+with ThreadPoolExecutor() as executor:
+    f1 = executor.submit(task, 1)
+    f2 = executor.submit(task, 2)
+
+    print(f1.result())
+    print(f2.result())
