@@ -8,6 +8,8 @@ def task(id):
     return f'Done with task {id}'
 
 
+start = perf_counter()
+
 with ThreadPoolExecutor as executor:
     results = executor.map(task, [1, 2])
     for result in results:
