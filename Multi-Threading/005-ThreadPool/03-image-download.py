@@ -18,6 +18,8 @@ def download_image(url):
         print(f'{filename} was downloaded...')
 
 
+start = time.perf_counter()
+
 urls = ['https://upload.wikimedia.org/wikipedia/commons/9/9d/Python_bivittatus_1701.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/4/48/Python_Regius.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/d/d3/Baby_carpet_python_caudal_luring.jpg',
