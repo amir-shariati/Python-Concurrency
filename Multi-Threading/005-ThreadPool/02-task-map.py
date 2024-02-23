@@ -14,3 +14,7 @@ with ThreadPoolExecutor as executor:
     results = executor.map(task, [1, 2])
     for result in results:
         print(result)
+
+finish = perf_counter()
+
+print(f"It took {finish-start} second(s) to finish.")
