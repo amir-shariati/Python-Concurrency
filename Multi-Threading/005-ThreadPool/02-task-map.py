@@ -10,7 +10,7 @@ def task(id):
 
 start = perf_counter()
 
-with ThreadPoolExecutor as executor:
+with ThreadPoolExecutor() as executor:
     results = executor.map(task, [1, 2])
     for result in results:
         print(result)
