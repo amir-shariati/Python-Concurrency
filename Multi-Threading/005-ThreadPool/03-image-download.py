@@ -28,3 +28,7 @@ urls = ['https://upload.wikimedia.org/wikipedia/commons/9/9d/Python_bivittatus_1
 
 with ThreadPoolExecutor() as executor:
       executor.map(download_image, urls)
+
+finish = time.perf_counter()
+
+print(f'It took {finish-start} second(s) to finish.')
