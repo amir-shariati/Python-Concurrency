@@ -14,6 +14,9 @@ start_time = perf_counter()
 t1 = Thread(target=show, args=('One',))
 t2 = Thread(target=show, args=('Two',))
 
+print(f't1 before start is: {t1}')
+print(f't2 before start is: {t2}')
+
 # start the threads
 t1.start()
 t2.start()
