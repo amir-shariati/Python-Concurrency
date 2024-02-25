@@ -20,3 +20,7 @@ t2.start()
 # wait for the threads to complete
 t1.join()
 t2.join()
+
+end_time = perf_counter()
+
+print(f'It took {end_time - start_time: 0.2f} second(S)')
