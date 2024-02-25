@@ -4,6 +4,7 @@ from threading import Thread, current_thread, enumerate
 
 def show(name):
     print(f'start {name}')
+    print(f'current thread is: {current_thread()}')
     sleep(2)
     print(f'stop {name}')
 
