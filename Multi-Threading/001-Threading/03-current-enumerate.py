@@ -11,6 +11,8 @@ def show(name):
 
 start_time = perf_counter()
 
+print(f'log Threads before create any threads: {enumerate()}')
+
 t1 = Thread(target=show, args=('One',))
 t2 = Thread(target=show, args=('Two',))
 
