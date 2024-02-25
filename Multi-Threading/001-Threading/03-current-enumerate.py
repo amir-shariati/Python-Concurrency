@@ -21,6 +21,9 @@ print(f't2 before start is: {t2}')
 t1.start()
 t2.start()
 
+print(f't1 after start is: {t1}')
+print(f't2 after start is: {t2}')
+
 # wait for the threads to complete
 t1.join()
 t2.join()
