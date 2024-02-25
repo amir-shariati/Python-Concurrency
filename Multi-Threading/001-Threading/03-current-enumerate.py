@@ -16,6 +16,8 @@ print(f'log Threads before create any threads: {enumerate()}')
 t1 = Thread(target=show, args=('One',))
 t2 = Thread(target=show, args=('Two',))
 
+print(f'log Threads after create threads: {enumerate()}')
+
 print(f't1 before start is: {t1}')
 print(f't2 before start is: {t2}')
 
