@@ -28,6 +28,9 @@ print(f't2 after start is: {t2}')
 t1.join()
 t2.join()
 
+print(f't1 after join is: {t1}')
+print(f't2 after join is: {t2}')
+
 end_time = perf_counter()
 
 print(f'It took {end_time - start_time: 0.2f} second(S)')
