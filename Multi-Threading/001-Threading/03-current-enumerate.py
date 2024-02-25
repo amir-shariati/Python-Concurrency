@@ -25,6 +25,8 @@ print(f't2 before start is: {t2}')
 t1.start()
 t2.start()
 
+print(f'log Threads after start threads: {enumerate()}')
+
 print(f't1 after start is: {t1}')
 print(f't2 after start is: {t2}')
 
