@@ -6,3 +6,8 @@ def show(name):
     print(f'start {name}')
     sleep(2)
     print(f'stop {name}')
+
+
+with ThreadPoolExecutor(max_workers=2) as executor:
+    names = ['one', 'two', 'three', 'four', 'five', 'six', 'seven']
+    executor.map(show, names)
