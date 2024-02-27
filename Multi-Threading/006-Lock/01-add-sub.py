@@ -14,3 +14,7 @@ def sub():
     global num
     for _ in range(10000):
         num -= 1
+
+
+t1 = Thread(target=add)
+t2 = Thread(target=sub)
