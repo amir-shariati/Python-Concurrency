@@ -18,3 +18,7 @@ def sub():
 
 t1 = Thread(target=add)
 t2 = Thread(target=sub)
+
+# start the threads
+t1.start()
+t2.start()
