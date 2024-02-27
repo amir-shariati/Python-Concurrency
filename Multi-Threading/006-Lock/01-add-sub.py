@@ -2,6 +2,7 @@ from time import sleep, perf_counter
 from threading import Thread, Lock
 
 num = 0
+lock = Lock()
 
 
 def add():
