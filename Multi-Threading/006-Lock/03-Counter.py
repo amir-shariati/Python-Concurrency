@@ -33,3 +33,7 @@ def main():
     t2.join()
 
     print(f'The final counter is {counter.value}')
+
+
+if __name__ == '__main__':
+    main()
