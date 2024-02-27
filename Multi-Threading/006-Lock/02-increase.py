@@ -25,3 +25,7 @@ lock = Lock()
 # create threads
 t1 = Thread(target=increase, args=(10, lock))
 t2 = Thread(target=increase, args=(20, lock))
+
+# start the threads
+t1.start()
+t2.start()
