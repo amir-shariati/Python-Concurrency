@@ -22,3 +22,7 @@ t2 = Thread(target=sub)
 # start the threads
 t1.start()
 t2.start()
+
+# wait for the threads to complete
+t1.join()
+t2.join()
