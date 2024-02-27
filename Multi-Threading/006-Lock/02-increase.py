@@ -33,3 +33,5 @@ t2.start()
 # wait for the threads to complete
 t1.join()
 t2.join()
+
+print(f'The final counter is {counter}')
