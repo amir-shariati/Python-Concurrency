@@ -1,5 +1,5 @@
 from time import sleep, perf_counter
-from threading import Thread, Lock
+from threading import Thread, Lock, enumerate
 
 
 class Calculator:
