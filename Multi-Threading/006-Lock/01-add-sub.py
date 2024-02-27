@@ -7,8 +7,9 @@ lock = Lock()
 
 def add():
     global num
-    for _ in range(10000):
-        num += 1
+    with lock:
+        for _ in range(10000):
+            num += 1
 
 
 def sub():
