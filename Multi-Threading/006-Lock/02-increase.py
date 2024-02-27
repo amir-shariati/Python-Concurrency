@@ -21,3 +21,7 @@ def increase(by, lock):
 
 
 lock = Lock()
+
+# create threads
+t1 = Thread(target=increase, args=(10, lock))
+t2 = Thread(target=increase, args=(20, lock))
