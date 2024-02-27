@@ -8,3 +8,9 @@ def add():
     global num
     for _ in range(10000):
         num += 1
+
+
+def sub():
+    global num
+    for _ in range(10000):
+        num -= 1
