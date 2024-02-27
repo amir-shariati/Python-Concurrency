@@ -18,3 +18,6 @@ def increase(by, lock):
     print(f'counter={counter}')
 
     lock.release()
+
+
+lock = Lock()
