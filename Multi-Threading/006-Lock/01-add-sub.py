@@ -14,8 +14,9 @@ def add():
 
 def sub():
     global num
-    for _ in range(10000):
-        num -= 1
+    with lock:
+        for _ in range(10000):
+            num -= 1
 
 
 t1 = Thread(target=add)
