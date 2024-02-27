@@ -34,3 +34,7 @@ def main():
 
     print(f'num after run threads is: {calculator.num}')
     print('Done')
+
+
+if __name__ == '__main__':
+    main()
