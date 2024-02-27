@@ -39,8 +39,9 @@ class Calculator:
 
 
 def main():
-    calculator = Calculator()
-    calculator()
+    # calculator = Calculator()
+    # calculator()
+    Calculator()()
 
 
 if __name__ == '__main__':
