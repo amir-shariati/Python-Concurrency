@@ -9,8 +9,9 @@ class Calculator:
 
     def add(self):
         with self.lock:
-            for _ in range(10000):
+            for _ in range(10):
                 self.num += 1
+                print(f'in add func, num is: {self.num}')
 
     def sub(self):
         with self.lock:
