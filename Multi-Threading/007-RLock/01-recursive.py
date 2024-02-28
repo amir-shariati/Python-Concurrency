@@ -1,4 +1,4 @@
-from threading import Thread, RLock
+from threading import Thread, RLock, current_thread
 
 # Create a reentrant lock
 lock = RLock()
