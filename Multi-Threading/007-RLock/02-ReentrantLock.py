@@ -12,3 +12,30 @@ multiple times without causing a deadlock.
 import threading
 
 
+class ReentrantLock:
+    def __init__(self):
+        self.lock = threading.Lock()
+        self.owner = None
+        self.counter = 0
+
+    def acquire(self):
+        current_thread = threading.current_thread()
+        if self.owner == current_thread:
+            # If the current thread already owns the lock, increment the counter
+            self.counter += 1
+        else:
+            # Acquire the lock and set the owner
+            self.lock.acquire()
+            self.owner = current_thread
+            self.counter = 1
+
+    def release(self):
+        if self.owner != threading.current_thread():
+            raise RuntimeError("Lock can only be released by the owning thread.")
+        self.counter -= 1
+        if self.counter == 0:
+            # Release the lock if the counter reaches zero
+            self.owner = None
+            self.lock.release()
+
+
