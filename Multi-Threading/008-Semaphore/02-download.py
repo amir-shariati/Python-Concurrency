@@ -17,3 +17,22 @@ def download(url):
         return data
 
 
+def main():
+    # URLs to download
+    urls = [
+        'https://www.ietf.org/rfc/rfc791.txt',
+        'https://www.ietf.org/rfc/rfc792.txt',
+        'https://www.ietf.org/rfc/rfc793.txt',
+        'https://www.ietf.org/rfc/rfc794.txt',
+        'https://www.ietf.org/rfc/rfc795.txt',
+    ]
+
+    # Create threads for each download
+    threads = [Thread(target=download, args=(url,)) for url in urls]
+
+    [thread.start() for thread in threads]
+
+    # Wait for all threads to complete
+    [thread.join() for thread in threads]
+
+
