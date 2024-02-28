@@ -39,3 +39,7 @@ class ReentrantLock:
             self.lock.release()
 
 
+# Create a reentrant lock
+lock = ReentrantLock()
+
+
