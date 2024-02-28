@@ -15,3 +15,6 @@ threads = [Thread(target=show) for _ in range(9)]
 
 # start all threads
 [thread.start() for thread in threads]
+
+# join all threads
+[thread.join() for thread in threads]
