@@ -23,3 +23,5 @@ threads = [Thread(target=recursive_function, args=(3,)) for _ in range(3)]
 
 # joint all threads
 [thread.join() for thread in threads]
+
+print(f'Done!')
