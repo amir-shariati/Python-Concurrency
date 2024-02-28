@@ -36,3 +36,5 @@ def main():
     [thread.join() for thread in threads]
 
 
+if __name__ == '__main__':
+    main()
