@@ -18,3 +18,5 @@ def recursive_function(count):
 # Create multiple threads
 threads = [Thread(target=recursive_function, args=(3,)) for _ in range(3)]
 
+# start all threads
+[thread.start() for thread in threads]
