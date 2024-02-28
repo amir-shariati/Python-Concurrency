@@ -54,3 +54,13 @@ def recursive_function(count):
     lock.release()
 
 
+# Create multiple threads
+threads = [threading.Thread(target=recursive_function, args=(3,)) for _ in range(3)]
+
+# start all threads
+[thread.start() for thread in threads]
+
+# Wait for all threads to finish
+[thread.join() for thread in threads]
+
+print(f'Done!')
