@@ -13,3 +13,8 @@ def recursive_function(count):
         recursive_function(count - 1)
         # Release the lock
     lock.release()
+
+
+# Create multiple threads
+threads = [Thread(target=recursive_function, args=(3,)) for _ in range(3)]
+
