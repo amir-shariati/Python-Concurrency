@@ -21,3 +21,6 @@ def show_second(f: Event, s: Event):
 def main():
     f_event = Event()
     s_event = Event()
+
+    t1 = Thread(target=show_first, args=(f_event, s_event))
+    t2 = Thread(target=show_second, args=(f_event, s_event))
