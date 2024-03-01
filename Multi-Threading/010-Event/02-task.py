@@ -27,3 +27,5 @@ def main() -> None:
     event.set()
 
 
+if __name__ == '__main__':
+    main()
