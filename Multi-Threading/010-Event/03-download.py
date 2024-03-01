@@ -29,3 +29,23 @@ def process_file(event):
     print(f"Number of words in the file: {word_count}")
 
 
+def main():
+    # Create an Event object
+    event = Event()
+
+    # Create and start the file download thread
+    download_thread = Thread(target=download_file, args=("https://www.ietf.org/rfc/rfc793.txt",  event))
+
+    download_thread.start()
+
+    # Create and start the file processing thread
+    process_thread = Thread(target=process_file, args=(event,))
+    process_thread.start()
+
+    # Wait for both threads to complete
+    download_thread.join()
+    process_thread.join()
+
+    print("Main thread finished.")
+
+
