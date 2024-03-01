@@ -24,3 +24,7 @@ def main():
 
     t1 = Thread(target=show_first, args=(f_event, s_event))
     t2 = Thread(target=show_second, args=(f_event, s_event))
+
+    t1.start()
+    t2.start()
+
