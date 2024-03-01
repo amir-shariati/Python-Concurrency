@@ -7,3 +7,4 @@ def show():
 
 
 t = Timer(5, show)
+t.start()
