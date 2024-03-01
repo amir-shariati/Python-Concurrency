@@ -49,3 +49,5 @@ def main():
     print("Main thread finished.")
 
 
+if __name__ == '__main__':
+    main()
