@@ -19,3 +19,5 @@ def show_second(f: Event, s: Event):
 
 
 def main():
+    f_event = Event()
+    s_event = Event()
