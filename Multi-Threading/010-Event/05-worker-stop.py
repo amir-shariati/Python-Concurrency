@@ -34,3 +34,6 @@ def main() -> None:
     # stop the child thread
     event.set()
 
+
+if __name__ == '__main__':
+    main()
