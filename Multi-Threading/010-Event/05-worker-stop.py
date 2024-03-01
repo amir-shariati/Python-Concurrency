@@ -3,6 +3,7 @@ from time import sleep
 
 
 class Worker(Thread):
+    def __init__(self, event, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.event = event
 
