@@ -18,3 +18,19 @@ class Worker(Thread):
             print('The thread was stopped maturely.')
 
 
+def main() -> None:
+    # create a new Event object
+    event = Event()
+
+    # create a new Worker thread
+    thread = Worker(event)
+
+    # start the thread
+    thread.start()
+
+    # suspend  the thread after 3 seconds
+    sleep(3)
+
+    # stop the child thread
+    event.set()
+
