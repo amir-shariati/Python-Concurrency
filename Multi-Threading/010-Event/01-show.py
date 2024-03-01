@@ -17,3 +17,5 @@ def show_second(f: Event, s: Event):
     f.wait()
     print(f'second is running')
 
+
+def main():
