@@ -28,3 +28,6 @@ def main():
     t1.start()
     t2.start()
 
+
+if __name__ == '__main__':
+    main()
