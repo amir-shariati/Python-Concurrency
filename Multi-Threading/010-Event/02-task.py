@@ -20,3 +20,7 @@ def main() -> None:
     print('Blocking the main thread for 3 seconds...')
     sleep(3)
     event.set()
+
+
+if __name__ == '__main__':
+    main()
