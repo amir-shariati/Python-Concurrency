@@ -9,3 +9,11 @@ def show_first(f: Event, s: Event):
     s.wait()
     print(f'first is running')
 
+
+def show_second(f: Event, s: Event):
+    print(f'second is starting')
+    sleep(2)
+    s.set()
+    f.wait()
+    print(f'second is running')
+
