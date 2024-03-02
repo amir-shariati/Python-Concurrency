@@ -30,3 +30,23 @@ def create_thumbnail(filename, size=(50, 50), thumb_dir='thumbs'):
     print(f'{filename} was processed...')
 
 
+def main():
+    start = perf_counter()
+
+    # create processes
+    processes = [Process(target=create_thumbnail, args=[filename])
+                 for filename in filenames]
+
+    # start the processes
+    for process in processes:
+        process.start()
+
+    # wait for completion
+    for process in processes:
+        process.join()
+
+    finish = perf_counter()
+
+    print(f'It took {finish - start:.2f} second(s) to finish')
+
+
