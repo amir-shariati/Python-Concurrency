@@ -13,3 +13,20 @@ filenames = [
 ]
 
 
+def create_thumbnail(filename, size=(50, 50), thumb_dir='thumbs'):
+    # open the image
+    img = Image.open(filename)
+
+    # apply the gaussian blur filter
+    img = img.filter(ImageFilter.GaussianBlur())
+
+    # create a thumbnail
+    img.thumbnail(size)
+
+    # save the image
+    img.save(f'{thumb_dir}/{os.path.basename(filename)}')
+
+    # display a message
+    print(f'{filename} was processed...')
+
+
