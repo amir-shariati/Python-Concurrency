@@ -50,3 +50,5 @@ def main():
     print(f'It took {finish - start:.2f} second(s) to finish')
 
 
+if __name__ == '__main__':
+    main()
