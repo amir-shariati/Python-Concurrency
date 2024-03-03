@@ -2,7 +2,8 @@ from time import perf_counter
 from multiprocessing import Process
 
 
-def task():
+def task(id):
+    print(f'task {id} is running')
     result = 0
     for _ in range(10**8):
         result += 1
