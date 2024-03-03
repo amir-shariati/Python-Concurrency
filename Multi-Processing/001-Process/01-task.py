@@ -2,7 +2,7 @@ from time import perf_counter
 from multiprocessing import Process
 
 
-def task() -> int:
+def task():
     result = 0
     for _ in range(10**8):
         result += 1
