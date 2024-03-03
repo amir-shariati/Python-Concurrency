@@ -14,8 +14,8 @@ def task(id):
 if __name__ == '__main__':
     start = perf_counter()
 
-    p1 = Process(target=task)
-    p2 = Process(target=task)
+    p1 = Process(target=task, args=(1,))
+    p2 = Process(target=task, args=(2, ))
 
     p1.start()
     p2.start()
