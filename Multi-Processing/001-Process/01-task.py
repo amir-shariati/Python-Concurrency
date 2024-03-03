@@ -7,6 +7,7 @@ def task(id):
     result = 0
     for _ in range(10**8):
         result += 1
+    print(f'task {id} Done')
     return result
 
 
