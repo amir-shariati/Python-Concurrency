@@ -20,3 +20,5 @@ p1.join()
 p2.join()
 
 end = time.perf_counter()
+
+print(f'It took {end - start:.2f} second(s) to finish')
