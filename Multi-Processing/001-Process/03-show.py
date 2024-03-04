@@ -18,3 +18,5 @@ p2.start()
 
 p1.join()
 p2.join()
+
+end = time.perf_counter()
