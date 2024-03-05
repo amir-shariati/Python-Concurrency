@@ -10,3 +10,6 @@ def show(name):
     print(f'process is {os.getpid()}')
     time.sleep(3)
     print(f'finishing {name}')
+
+
+start = time.perf_counter()
