@@ -22,3 +22,4 @@ class ShowProcess(Process):
         show(self.name, self.delay)
 
 
+start = time.perf_counter()
