@@ -23,3 +23,12 @@ class ShowProcess(Process):
 
 
 start = time.perf_counter()
+
+p1 = ShowProcess(name='One', delay=2)
+p2 = ShowProcess(name='Two', delay=3)
+
+p1.start()
+p2.start()
+
+p1.join()
+p2.join()
