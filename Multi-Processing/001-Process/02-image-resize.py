@@ -41,8 +41,7 @@ def main():
     [process.start() for process in processes]
 
     # wait for completion
-    for process in processes:
-        process.join()
+    [process.join() for process in processes]
 
     finish = perf_counter()
 
