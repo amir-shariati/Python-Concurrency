@@ -38,8 +38,7 @@ def main():
                  for filename in filenames]
 
     # start the processes
-    for process in processes:
-        process.start()
+    [process.start() for process in processes]
 
     # wait for completion
     for process in processes:
