@@ -31,6 +31,8 @@ p4 = ShowProcess(name='Two', delay=3)
 
 p1.start()
 p2.start()
+p3.start()
+p4.start()
 
 p1.join()
 p2.join()
