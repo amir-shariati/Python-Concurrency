@@ -19,3 +19,8 @@ p2 = Process(target=show, args=('Two',))
 p3 = Process(target=show, args=('Three',), daemon=True)
 p4 = Process(target=show, args=('Four',), daemon=True)
 
+p1.start()
+p2.start()
+p3.start()
+p4.start()
+
