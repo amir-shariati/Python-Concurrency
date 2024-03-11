@@ -10,3 +10,5 @@ def show(name):
     print(f'finishing {name}')
 
 
+start = time.perf_counter()
+
