@@ -33,3 +33,8 @@ print(f'{p4.name} is alive: {p4.is_alive()}')
 
 p2.terminate()
 p3.kill()
+
+p1.join()
+p2.join()
+p3.join()
+p4.join()
