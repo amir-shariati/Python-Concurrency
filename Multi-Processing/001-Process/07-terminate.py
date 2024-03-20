@@ -20,3 +20,8 @@ p1 = Process(target=show, args=('One',))
 p2 = Process(target=show, args=('Two',))
 p3 = Process(target=show, args=('Two',))
 p4 = Process(target=showError)
+
+p1.start()
+p2.start()
+p3.start()
+p4.start()
