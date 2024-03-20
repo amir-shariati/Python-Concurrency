@@ -38,3 +38,8 @@ p1.join()
 p2.join()
 p3.join()
 p4.join()
+
+print(f'{p1.name} is alive: {p1.is_alive()}')
+print(f'{p2.name} is alive: {p2.is_alive()}')
+print(f'{p3.name} is alive: {p3.is_alive()}')
+print(f'{p4.name} is alive: {p4.is_alive()}')
