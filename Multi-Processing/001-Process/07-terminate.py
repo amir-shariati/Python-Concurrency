@@ -25,3 +25,8 @@ p1.start()
 p2.start()
 p3.start()
 p4.start()
+
+print(f'{p1.name} is alive: {p1.is_alive()}')
+print(f'{p2.name} is alive: {p2.is_alive()}')
+print(f'{p3.name} is alive: {p3.is_alive()}')
+print(f'{p4.name} is alive: {p4.is_alive()}')
