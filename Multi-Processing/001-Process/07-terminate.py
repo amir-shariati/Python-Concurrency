@@ -13,3 +13,5 @@ def showError():
     print(f'start process {current_process()}')
     raise Exception('somthing wrong')
 
+
+start = time.perf_counter()
