@@ -48,3 +48,7 @@ print(f'{p1.name} exit code is: {p1.exitcode}')
 print(f'{p2.name} exit code is: {p2.exitcode}')
 print(f'{p3.name} exit code is: {p3.exitcode}')
 print(f'{p4.name} exit code is: {p4.exitcode}')
+
+end = time.perf_counter()
+
+print(f'It took {end - start:.2f} second(s) to finish')
