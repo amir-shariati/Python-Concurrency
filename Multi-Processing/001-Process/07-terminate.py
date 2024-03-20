@@ -15,3 +15,8 @@ def showError():
 
 
 start = time.perf_counter()
+
+p1 = Process(target=show, args=('One',))
+p2 = Process(target=show, args=('Two',))
+p3 = Process(target=show, args=('Two',))
+p4 = Process(target=showError)
