@@ -8,3 +8,8 @@ def show(name):
     time.sleep(3)
     print(f'finishing {name}')
 
+
+def showError():
+    print(f'start process {current_process()}')
+    raise Exception('somthing wrong')
+
