@@ -19,3 +19,6 @@ def p2_func(num, lock: Lock):
     print(f'finish process: {current_process()}')
 
 
+lock = Lock()
+num = 0
+
