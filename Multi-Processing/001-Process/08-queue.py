@@ -12,3 +12,11 @@ def p1_func(queue: Queue):
     print(f'p1 nums is: {nums}')
 
 
+def p2_func(queue: Queue):
+    print(f'current_process is {current_process()}')
+    nums = queue.get()
+    nums.extend([4, 5, 6])
+    queue.put(nums)
+    print(f'p2 nums is: {nums}')
+
+
