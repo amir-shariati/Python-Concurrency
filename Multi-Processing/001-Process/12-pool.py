@@ -7,3 +7,5 @@ def show(name):
     time.sleep(2)
     print(f'{name}, finish process: {current_process()}')
 
+
+names = ['One', 'Two', 'Three', 'Four']
