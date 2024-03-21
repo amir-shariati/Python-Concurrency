@@ -16,3 +16,4 @@ start = time.perf_counter()
 
 pool = Pool(processes=2)
 pool.map(show, names)
+pool.close()
