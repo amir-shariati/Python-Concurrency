@@ -26,3 +26,6 @@ print(f'It took {end - start:.2f} second(s) to finish')
 print('--------------------------------')
 
 start = time.perf_counter()
+
+with Pool(processes=2) as pool:
+    pool.map(show, names)
