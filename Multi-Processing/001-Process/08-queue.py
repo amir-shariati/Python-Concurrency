@@ -23,3 +23,5 @@ def p2_func(queue: Queue):
 qs = Queue()
 qs.put(numbers)
 
+start = time.perf_counter()
+
