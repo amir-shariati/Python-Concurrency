@@ -9,3 +9,5 @@ def show(name):
 
 
 names = ['One', 'Two', 'Three', 'Four']
+
+print(f'cpu count is: {cpu_count()}')
