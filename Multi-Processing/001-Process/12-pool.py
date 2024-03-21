@@ -18,3 +18,7 @@ pool = Pool(processes=2)
 pool.map(show, names)
 pool.close()
 pool.join()
+
+end = time.perf_counter()
+
+print(f'It took {end - start:.2f} second(s) to finish')
