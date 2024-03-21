@@ -20,3 +20,6 @@ def p2_func(queue: Queue):
     print(f'p2 nums is: {nums}')
 
 
+qs = Queue()
+qs.put(numbers)
+
