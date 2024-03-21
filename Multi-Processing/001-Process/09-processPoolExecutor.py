@@ -16,3 +16,6 @@ with ProcessPoolExecutor(max_workers=2) as executor:
     names = ['One', 'Two', 'Three', 'Four']
     executor.map(show, names)
 
+end = time.perf_counter()
+
+print(f'It took {end - start:.2f} second(s) to finish')
