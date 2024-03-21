@@ -15,3 +15,4 @@ print(f'cpu count is: {cpu_count()}')
 start = time.perf_counter()
 
 pool = Pool(processes=2)
+pool.map(show, names)
