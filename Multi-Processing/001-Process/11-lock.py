@@ -22,3 +22,5 @@ def p2_func(num, lock: Lock):
 lock = Lock()
 num = 0
 
+start = time.perf_counter()
+
