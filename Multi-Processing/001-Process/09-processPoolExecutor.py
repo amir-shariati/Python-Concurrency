@@ -12,3 +12,7 @@ def show(name):
 
 start = time.perf_counter()
 
+with ProcessPoolExecutor(max_workers=2) as executor:
+    names = ['One', 'Two', 'Three', 'Four']
+    executor.map(show, names)
+
