@@ -34,3 +34,8 @@ p2.start()
 p1.join()
 p2.join()
 
+print(f'numbers is {qs.get()}')
+
+end = time.perf_counter()
+
+print(f'It took {end - start:.2f} second(s) to finish')
