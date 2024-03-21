@@ -27,3 +27,6 @@ start = time.perf_counter()
 p1 = Process(target=p1_func, args=(num, lock))
 p2 = Process(target=p2_func, args=(num, lock))
 
+p1.start()
+p2.start()
+
