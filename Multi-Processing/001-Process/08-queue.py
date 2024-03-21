@@ -31,3 +31,6 @@ p2 = Process(target=p2_func, args=(qs,))
 p1.start()
 p2.start()
 
+p1.join()
+p2.join()
+
