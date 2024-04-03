@@ -8,6 +8,10 @@ async def say_hello(name: str):
     await asyncio.sleep(2)
     print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, hello {name}')
 
+
+async def main():
+    print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, main coroutine, done')
+
 start = time.perf_counter()
 asyncio.run(say_hello('One'))
 asyncio.run(say_hello('Two'))
