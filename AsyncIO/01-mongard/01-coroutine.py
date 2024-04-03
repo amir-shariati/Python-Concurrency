@@ -13,6 +13,9 @@ async def main():
     t1 = asyncio.create_task(say_hello('One'))
     t2 = asyncio.create_task(say_hello('Two'))
 
+    await t1
+    await t2
+
     print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, main coroutine, done')
 
 start = time.perf_counter()
