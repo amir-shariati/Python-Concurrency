@@ -19,9 +19,8 @@ async def main():
     print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, main coroutine, done')
 
 start = time.perf_counter()
-asyncio.run(say_hello('One'))
-asyncio.run(say_hello('Two'))
 
+asyncio.run(main())
 
 end = time.perf_counter()
 
