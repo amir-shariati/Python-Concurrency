@@ -4,6 +4,7 @@ import time
 
 
 async def say_hello(name: str):
+    print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, start coroutine {name}')
     await asyncio.sleep(2)
     print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, hello {name}')
 
