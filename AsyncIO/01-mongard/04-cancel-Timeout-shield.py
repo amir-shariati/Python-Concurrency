@@ -9,4 +9,7 @@ async def send_msg(msg, delay):
 
 
 async def main():
+    t1 = asyncio.create_task(send_msg('hello', 1), name='Task-1')
+    t2 = asyncio.create_task(send_msg('hello', 4), name='Task-2')
+
 
