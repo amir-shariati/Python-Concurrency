@@ -8,3 +8,5 @@ async def send_msg(msg, delay):
     print(f'{asyncio.current_task().get_name()} is Done')
 
 
+async def main():
+
