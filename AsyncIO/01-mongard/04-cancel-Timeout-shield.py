@@ -21,3 +21,4 @@ async def main():
             print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {t2.get_name()} continue to be done')
             await t2
 
+asyncio.run(main())
