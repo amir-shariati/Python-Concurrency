@@ -20,6 +20,13 @@ async def main():
         if sec == 5:
             t1.cancel()
 
+    while not t2.done():
+        print(f'{t2.get_name()} is running')
+        await asyncio.sleep(1)
+        sec += 1
+        if sec == 5:
+            t2.cancel()
+
     try:
         await t1
 
