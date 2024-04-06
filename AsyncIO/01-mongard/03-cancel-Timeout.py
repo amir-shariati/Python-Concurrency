@@ -9,4 +9,14 @@ async def send_msg(msg, delay):
 
 
 async def main():
+    t1 = asyncio.create_task(send_msg('hello', 3))
+    t2 = asyncio.create_task(send_msg('hello', 8))
 
+
+    except TimeoutError as e:
+        if t1.cancelled():
+            print(f'TimeoutError, {t1.get_name()} is canceled')
+        elif t2.cancelled():
+            print(f'TimeoutError, {t2.get_name()} is canceled')
+
+asyncio.run(main())
