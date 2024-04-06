@@ -16,3 +16,8 @@ async def main():
         await asyncio.wait_for(t1, 2)
         await asyncio.wait_for(asyncio.shield(t2), 2)
 
+    except asyncio.TimeoutError:
+        if not t2.done():
+            print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {t2.get_name()} continue to be done')
+            await t2
+
