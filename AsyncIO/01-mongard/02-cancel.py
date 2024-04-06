@@ -4,7 +4,7 @@ from asyncio import CancelledError
 
 async def send_msg(msg, delay):
     await asyncio.sleep(delay)
-    print(f'{msg}, Done')
+    print(f'{asyncio.current_task().get_name()} is Done')
 
 
 async def main():
