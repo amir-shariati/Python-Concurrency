@@ -12,4 +12,7 @@ async def main():
     t1 = asyncio.create_task(send_msg('hello', 1), name='Task-1')
     t2 = asyncio.create_task(send_msg('hello', 4), name='Task-2')
 
+    try:
+        await asyncio.wait_for(t1, 2)
+        await asyncio.wait_for(asyncio.shield(t2), 2)
 
