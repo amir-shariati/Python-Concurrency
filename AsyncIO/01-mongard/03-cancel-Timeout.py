@@ -12,6 +12,9 @@ async def main():
     t1 = asyncio.create_task(send_msg('hello', 3))
     t2 = asyncio.create_task(send_msg('hello', 8))
 
+    try:
+        await asyncio.wait_for(t1, 4)
+        await asyncio.wait_for(t2, 4)
 
     except TimeoutError as e:
         if t1.cancelled():
