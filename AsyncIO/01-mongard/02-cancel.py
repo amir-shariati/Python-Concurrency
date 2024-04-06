@@ -32,6 +32,9 @@ async def main():
         await t2
 
     except CancelledError:
-        print(f'{t1.get_name()} is canceled')
+        if t1.cancelled():
+            print(f'{t1.get_name()} is canceled')
+        elif t2.cancelled():
+            print(f'{t2.get_name()} is canceled')
 
 asyncio.run(main())
