@@ -25,3 +25,4 @@ async def main():
     except CancelledError:
         print(f'{t1.get_name()} is canceled')
 
+asyncio.run(main())
