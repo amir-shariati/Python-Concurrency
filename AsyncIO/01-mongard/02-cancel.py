@@ -29,6 +29,7 @@ async def main():
 
     try:
         await t1
+        await t2
 
     except CancelledError:
         print(f'{t1.get_name()} is canceled')
