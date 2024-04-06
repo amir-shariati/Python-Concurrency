@@ -19,3 +19,9 @@ async def main():
         if sec == 5:
             t1.cancel()
 
+    try:
+        await t1
+
+    except CancelledError:
+        print(f'{t1.get_name()} is canceled')
+
