@@ -14,3 +14,5 @@ async def main():
     await t1
     await t2
 
+loop = asyncio.new_event_loop()
+
