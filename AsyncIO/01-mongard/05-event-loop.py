@@ -6,3 +6,5 @@ async def send_msg(msg, delay):
     await asyncio.sleep(delay)
     print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()} is Done')
 
+
+async def main():
