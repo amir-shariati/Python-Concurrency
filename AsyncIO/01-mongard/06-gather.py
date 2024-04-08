@@ -38,4 +38,12 @@ async def main():
 
     b1 = asyncio.create_task(block_client_session(), name='Block-1')
 
+    start = time.perf_counter()
+    print(f'start coroutine {b1.get_name()}')
+    await b1
+    end = time.perf_counter()
+    print(f'block_client_session took {end - start:.2f} second(s) to finish')
+
+    print('-------------------------------------------------------------------------')
+
 
