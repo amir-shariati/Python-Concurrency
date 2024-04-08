@@ -26,3 +26,11 @@ async def block_client_session():
         print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()}, reps:{reqs}')
 
 
+async def gather_client_session():
+    async with aiohttp.ClientSession() as session:
+        reqs = [show_status(session, url) for url in urls]
+        reps = await asyncio.gather(*reqs, return_exceptions=True)
+        print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()}, reps:{reps}')
+        return reps
+
+
