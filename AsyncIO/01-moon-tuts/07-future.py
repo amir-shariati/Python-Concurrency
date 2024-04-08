@@ -25,3 +25,4 @@ async def main():
     print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()} future is: {result}')
     print(f'gather_client_session took {end - start:.2f} second(s) to finish')
 
+asyncio.run(main())
