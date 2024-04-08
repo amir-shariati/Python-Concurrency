@@ -20,4 +20,9 @@ async def show_status(session: aiohttp.ClientSession, url: str):
         return res.status
 
 
+async def block_client_session():
+    async with aiohttp.ClientSession() as session:
+        reqs = [await show_status(session, url) for url in urls]
+        print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()}, reps:{reqs}')
+
 
