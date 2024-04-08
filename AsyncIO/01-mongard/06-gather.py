@@ -46,4 +46,9 @@ async def main():
 
     print('-------------------------------------------------------------------------')
 
+    start = time.perf_counter()
+    print(f'start coroutine gather')
+    await gather_client_session()
+    end = time.perf_counter()
+    print(f'gather_client_session took {end - start:.2f} second(s) to finish')
 
