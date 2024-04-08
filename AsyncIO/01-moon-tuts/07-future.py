@@ -12,3 +12,5 @@ async def set_after(fut: asyncio.Future, delay, value):
 
 
 async def main():
+    loop = asyncio.get_running_loop()
+
