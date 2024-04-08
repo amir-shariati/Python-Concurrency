@@ -18,3 +18,10 @@ async def main():
 
     loop.create_task(set_after(fut, 2, 'Hello'))
 
+    start = time.perf_counter()
+    print(f'start coroutine gather')
+    result = await fut
+    end = time.perf_counter()
+    print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()} future is: {result}')
+    print(f'gather_client_session took {end - start:.2f} second(s) to finish')
+
