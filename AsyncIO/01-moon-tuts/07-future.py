@@ -16,3 +16,5 @@ async def main():
 
     fut = loop.create_future()
 
+    loop.create_task(set_after(fut, 2, 'Hello'))
+
