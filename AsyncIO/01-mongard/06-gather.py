@@ -36,4 +36,6 @@ async def gather_client_session():
 
 async def main():
 
+    b1 = asyncio.create_task(block_client_session(), name='Block-1')
+
 
