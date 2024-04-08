@@ -52,3 +52,5 @@ async def main():
     end = time.perf_counter()
     print(f'gather_client_session took {end - start:.2f} second(s) to finish')
 
+
+asyncio.run(main())
