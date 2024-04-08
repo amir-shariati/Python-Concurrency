@@ -10,3 +10,5 @@ async def set_after(fut: asyncio.Future, delay, value):
     print(
         f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()}, set future:{value}')
 
+
+async def main():
