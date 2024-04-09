@@ -36,3 +36,5 @@ async def main():
     await as_completed_client_session()
     end = time.perf_counter()
     print(f'as_completed_client_session took {end - start:.2f} second(s) to finish')
+
+asyncio.run(main())
