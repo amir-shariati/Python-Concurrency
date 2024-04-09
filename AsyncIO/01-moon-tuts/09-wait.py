@@ -76,5 +76,21 @@ async def main():
         print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, pending task is: {pending_task.get_name()}')
     print(f'wait_first_completed_client_session took {end - start:.2f} second(s) to finish')
 
+    print('-------------------------------------------------------------')
+
+    start = time.perf_counter()
+    print(f'start coroutine wait_first_exception_client_session')
+    done, pending = await wait_first_exception_client_session()
+    end = time.perf_counter()
+    for done_task in done:
+        print(
+            f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, '
+            f'done task is: {done_task.get_name()}, '
+            f'result: {done_task.result()}'
+        )
+    for pending_task in pending:
+        print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, pending task is: {pending_task.get_name()}')
+    print(f'wait_first_exception_client_session took {end - start:.2f} second(s) to finish')
+
 
 asyncio.run(main())
