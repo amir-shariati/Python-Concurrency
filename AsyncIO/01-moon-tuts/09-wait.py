@@ -38,6 +38,12 @@ async def wait_first_completed_client_session():
         return done, pending
 
 
+async def wait_first_exception_client_session():
+    async with aiohttp.ClientSession() as session:
+        reqs = [asyncio.create_task(show_status(session, url, random.randint(1, 3))) for url in urls]
+        done, pending = await asyncio.wait(reqs, return_when=asyncio.FIRST_EXCEPTION)
+        return done, pending
+
 
 async def main():
     start = time.perf_counter()
