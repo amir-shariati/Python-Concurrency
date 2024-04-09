@@ -28,3 +28,11 @@ async def as_completed_client_session():
     async with aiohttp.ClientSession() as session:
         reqs = [show_status(session, url, random.randint(1, 3)) for url in urls]
         [await coro for coro in asyncio.as_completed(reqs)]
+
+
+async def main():
+    start = time.perf_counter()
+    print(f'start coroutine as_completed')
+    await as_completed_client_session()
+    end = time.perf_counter()
+    print(f'as_completed_client_session took {end - start:.2f} second(s) to finish')
