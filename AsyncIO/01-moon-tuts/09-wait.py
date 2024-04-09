@@ -30,3 +30,14 @@ async def wait_client_session():
         done, pending = await asyncio.wait(reqs)
         return done, pending
 
+
+async def main():
+    start = time.perf_counter()
+    print(f'start coroutine wait_client_session')
+    done, pending = await wait_client_session()
+    end = time.perf_counter()
+    for done_task in done:
+        print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, done is: {done_task}')
+    for pending_task in pending:
+        print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, pending is: {pending_task}')
+    print(f'wait_client_session took {end - start:.2f} second(s) to finish')
