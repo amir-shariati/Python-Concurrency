@@ -18,3 +18,19 @@ async def increment(lock: asyncio.Lock):
             f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, '
             f'increment, {asyncio.current_task().get_name()}, counter is: {counter}')
 
+
+async def decrement(lock: asyncio.Lock):
+    print(
+        f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, '
+        f'decrement, {asyncio.current_task().get_name()} is started')
+    global counter
+    await lock.acquire()
+    temp_counter = counter
+    temp_counter -= 1
+    await asyncio.sleep(0.01)
+    counter = temp_counter
+    print(
+        f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, '
+        f'decrement, {asyncio.current_task().get_name()}, counter is: {counter}')
+    lock.release()
+
