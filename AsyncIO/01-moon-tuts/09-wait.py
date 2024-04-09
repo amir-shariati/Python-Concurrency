@@ -51,7 +51,11 @@ async def main():
     done, pending = await wait_client_session()
     end = time.perf_counter()
     for done_task in done:
-        print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, done is: {done_task}')
+        print(
+            f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, '
+            f'done task is: {done_task.get_name()}, '
+            f'result: {done_task.result()}'
+        )
     for pending_task in pending:
         print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, pending is: {pending_task}')
     print(f'wait_client_session took {end - start:.2f} second(s) to finish')
