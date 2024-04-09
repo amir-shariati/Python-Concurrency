@@ -41,3 +41,5 @@ async def main():
     for pending_task in pending:
         print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, pending is: {pending_task}')
     print(f'wait_client_session took {end - start:.2f} second(s) to finish')
+
+asyncio.run(main())
