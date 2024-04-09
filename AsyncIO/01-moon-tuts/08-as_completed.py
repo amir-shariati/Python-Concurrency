@@ -22,3 +22,9 @@ async def show_status(session: aiohttp.ClientSession, url: str, delay):
             f' {asyncio.current_task().get_name()}, '
             f' delay:{delay}, status for url {url} is:{res.status}')
         return res.status
+
+
+async def as_completed_client_session():
+    async with aiohttp.ClientSession() as session:
+        reqs = [show_status(session, url, random.randint(1, 3)) for url in urls]
+        [await coro for coro in asyncio.as_completed(reqs)]
