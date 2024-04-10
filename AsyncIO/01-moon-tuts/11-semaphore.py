@@ -127,4 +127,6 @@ async def semaphore_client_session_call_decorated_task():
 
 
 async def main():
+    sem = asyncio.Semaphore(2)
+
 
