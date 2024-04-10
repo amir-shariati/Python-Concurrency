@@ -45,3 +45,13 @@ async def show_status(session: aiohttp.ClientSession, url: str, delay):
         return res.status
 
 
+async def semaphore_client_session_semaphore_wrap(sem: asyncio.Semaphore):
+    async with aiohttp.ClientSession() as session:
+        async def sem_task(task):
+            async with sem:
+                return await task
+
+        reqs = [sem_task(show_status(session, url, random.randint(1, 3))) for url in urls]
+        await asyncio.gather(*reqs)
+
+
