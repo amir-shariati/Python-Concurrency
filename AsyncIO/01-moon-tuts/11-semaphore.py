@@ -126,3 +126,5 @@ async def semaphore_client_session_call_decorated_task():
         await asyncio.gather(*reqs)
 
 
+async def main():
+
