@@ -120,3 +120,9 @@ async def show_status_with_decorator(session: aiohttp.ClientSession, url: str, d
         return res.status
 
 
+async def semaphore_client_session_call_decorated_task():
+    async with aiohttp.ClientSession() as session:
+        reqs = [show_status_with_decorator(session, url, random.randint(1, 3)) for url in urls]
+        await asyncio.gather(*reqs)
+
+
