@@ -143,3 +143,11 @@ async def main():
     end = time.perf_counter()
     print(f'semaphore_client_session_semaphore_wrap took {end - start:.2f} second(s) to finish')
 
+    print('-------------------------------------------------------------')
+
+    start = time.perf_counter()
+    print(f'start semaphore_client_session_call_decorated_task coroutine ')
+    await semaphore_client_session_call_decorated_task()
+    end = time.perf_counter()
+    print(f'semaphore_client_session_call_decorated_task took {end - start:.2f} second(s) to finish')
+
