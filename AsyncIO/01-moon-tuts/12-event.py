@@ -21,3 +21,5 @@ async def waiter(event: asyncio.Event, delay):
         f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()}, finish processing')
 
 
+async def main():
+
