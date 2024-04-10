@@ -34,3 +34,14 @@ async def semaphore_client_session(sem: asyncio.Semaphore):
         await asyncio.gather(*reqs)
 
 
+async def show_status(session: aiohttp.ClientSession, url: str, delay):
+    print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()} is started')
+    await asyncio.sleep(delay)
+    async with session.get(url) as res:
+        print(
+            f'{datetime.datetime.now().time().strftime("%H:%M:%S")},'
+            f' {asyncio.current_task().get_name()}, '
+            f' delay:{delay}, status for url {url} is:{res.status}')
+        return res.status
+
+
