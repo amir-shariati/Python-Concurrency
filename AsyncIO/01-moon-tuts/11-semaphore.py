@@ -83,3 +83,26 @@ def rate_limited(max_concurrent):
     return decorator
 
 
+class RateLimited:
+
+    def __init__(self, max_concurrent):
+    # def __init__(self, *args, **kwargs):
+        self.max_concurrent = max_concurrent
+        self.semaphore = None
+        # self.args = args
+        # self.kwargs = kwargs
+
+    def __call__(self, task):
+
+        @functools.wraps(task)
+        async def wrapper(*args, **kwargs):
+            if self.semaphore is None:
+                # self.semaphore = asyncio.Semaphore(*self.args, **self.kwargs)
+                self.semaphore = asyncio.Semaphore(self.max_concurrent)
+
+            async with self.semaphore:
+                return await task(*args, **kwargs)
+
+        return wrapper
+
+
