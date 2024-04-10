@@ -28,3 +28,9 @@ async def show_status_with_semaphore(session: aiohttp.ClientSession, url: str, d
             return res.status
 
 
+async def semaphore_client_session(sem: asyncio.Semaphore):
+    async with aiohttp.ClientSession() as session:
+        reqs = [show_status_with_semaphore(session, url, random.randint(1, 3), sem) for url in urls]
+        await asyncio.gather(*reqs)
+
+
