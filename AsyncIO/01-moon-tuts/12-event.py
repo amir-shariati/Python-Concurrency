@@ -23,6 +23,12 @@ async def waiter(event: asyncio.Event, delay):
 
 async def main():
     event = asyncio.Event()
+    delay = random.randint(3, 6)
+    print(
+        f'{datetime.datetime.now().time().strftime("%H:%M:%S")},'
+        f' {asyncio.current_task().get_name()}, '
+        f' trigger run after {delay} seconds ')
+    asyncio.get_running_loop().call_later(delay, functools.partial(trigger, event))
 
     start = time.perf_counter()
     print(f'start increment coroutine by gather')
