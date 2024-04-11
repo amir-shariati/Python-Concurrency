@@ -31,10 +31,10 @@ async def main():
     asyncio.get_running_loop().call_later(delay, functools.partial(trigger, event))
 
     start = time.perf_counter()
-    print(f'start increment coroutine by gather')
+    print(f'start waiter coroutine by gather')
     tasks = [asyncio.create_task(waiter(event, random.randint(1, 3))) for _ in range(3)]
     await asyncio.gather(*tasks)
     end = time.perf_counter()
-    print(f'gather_client_session took {end - start:.2f} second(s) to finish')
+    print(f'waiter coroutine took {end - start:.2f} second(s) to finish')
 
 asyncio.run(main())
