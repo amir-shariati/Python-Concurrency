@@ -31,6 +31,12 @@ async def waiter(condition: asyncio.Condition, delay):
 
 async def main():
     condition = asyncio.Condition()
+    delay = random.randint(3, 6)
+
+    print(
+        f'{datetime.datetime.now().time().strftime("%H:%M:%S")},'
+        f' {asyncio.current_task().get_name()}, '
+        f' trigger run after {delay} seconds ')
 
 
     start = time.perf_counter()
