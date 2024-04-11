@@ -30,4 +30,14 @@ async def waiter(condition: asyncio.Condition, delay):
 
 
 async def main():
+    condition = asyncio.Condition()
 
+
+    start = time.perf_counter()
+    print(f'start waiter coroutine by gather')
+    tasks = [asyncio.create_task(waiter(condition, random.randint(1, 3))) for _ in range(3)]
+    await asyncio.gather(*tasks)
+    end = time.perf_counter()
+    print(f'waiter coroutine took {end - start:.2f} second(s) to finish')
+
+asyncio.run(main())
