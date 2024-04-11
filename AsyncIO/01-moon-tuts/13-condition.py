@@ -38,6 +38,9 @@ async def main():
         f' {asyncio.current_task().get_name()}, '
         f' trigger run after {delay} seconds ')
 
+    asyncio.create_task(trigger(condition))
+
+    print('-------------------------------------------------------------')
 
     start = time.perf_counter()
     print(f'start waiter coroutine by gather')
