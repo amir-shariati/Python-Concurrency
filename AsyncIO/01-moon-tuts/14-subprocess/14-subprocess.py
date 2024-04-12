@@ -25,3 +25,4 @@ async def main():
     print(f'waiter coroutine took {end - start:.2f} second(s) to finish')
 
 
+asyncio.run(main())
