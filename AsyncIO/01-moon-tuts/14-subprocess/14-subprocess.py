@@ -13,4 +13,6 @@ async def main():
     )
 
     stdout, stderr = await process.communicate(b'Amir Shariati')
+    print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, stdout: {stdout}')
+    print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, stderr: {stderr}')
 
