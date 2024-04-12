@@ -12,3 +12,5 @@ async def main():
         stdout=asyncio.subprocess.PIPE
     )
 
+    stdout, stderr = await process.communicate(b'Amir Shariati')
+
