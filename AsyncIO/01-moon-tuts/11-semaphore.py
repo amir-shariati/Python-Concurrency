@@ -74,7 +74,6 @@ def rate_limited(max_concurrent):
 class RateLimited:
 
     def __init__(self, max_concurrent):
-    # def __init__(self, *args, **kwargs):
         self.max_concurrent = max_concurrent
         self.semaphore = None
         # self.args = args
