@@ -56,7 +56,7 @@ async def semaphore_client_session_semaphore_wrap(sem: asyncio.Semaphore):
 
 
 def rate_limited(max_concurrent):
-    # semaphore = asyncio.Semaphore(max_concurrent)
+
     def decorator(task):
         semaphore = asyncio.Semaphore(max_concurrent)
 
