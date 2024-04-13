@@ -82,7 +82,6 @@ class RateLimited:
         @functools.wraps(task)
         async def wrapper(*args, **kwargs):
             if self.semaphore is None:
-                # self.semaphore = asyncio.Semaphore(*self.args, **self.kwargs)
                 self.semaphore = asyncio.Semaphore(self.max_concurrent)
 
             async with self.semaphore:
