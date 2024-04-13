@@ -62,18 +62,6 @@ def rate_limited(max_concurrent):
 
         @functools.wraps(task)
         async def wrapper(*args, **kwargs):
-            # async with asyncio.Semaphore(2):
-            # semaphore = asyncio.Semaphore(max_concurrent)
-
-
-            # acquired = await semaphore.acquire()
-            # if acquired:
-            #     try:
-            #         result = await task(*args, **kwargs)
-            #
-            #     finally:
-            #         semaphore.release()
-            #     return result
 
             async with semaphore:
                 return await task(*args, **kwargs)
