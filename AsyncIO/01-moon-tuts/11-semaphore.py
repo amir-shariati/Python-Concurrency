@@ -91,8 +91,6 @@ class RateLimited:
 
 
 @RateLimited(max_concurrent=2)
-# @RateLimited(2)
-# @Semaphore(2)
 async def show_status_with_decorator(session: aiohttp.ClientSession, url: str, delay):
     print(f'{datetime.datetime.now().time().strftime("%H:%M:%S")}, {asyncio.current_task().get_name()} is started')
     await asyncio.sleep(delay)
